@@ -1,0 +1,317 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2 class="fw-bold text-success">
+            <i class="fas fa-money-bill-wave"></i>
+            Billing & Revenue Management
+        </h2>
+        <p class="text-muted">
+            Manage waste collection fees, customers, invoices, payments and revenue tracking.
+        </p>
+    </div>
+
+    <button class="btn btn-success">
+        <i class="fas fa-plus"></i>
+        Add Customer
+    </button>
+</div>
+
+<!-- KPI CARDS -->
+
+<div class="row mb-4">
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h6 class="text-muted">Registered Customers</h6>
+                <h2 class="fw-bold text-primary">1,245</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h6 class="text-muted">Monthly Revenue</h6>
+                <h2 class="fw-bold text-success">KES 2.4M</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h6 class="text-muted">Pending Invoices</h6>
+                <h2 class="fw-bold text-warning">345</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h6 class="text-muted">Collection Rate</h6>
+                <h2 class="fw-bold text-danger">82%</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <!-- LEFT SIDE -->
+
+    <div class="col-md-8">
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0">
+                    Registered Customers
+                </h5>
+            </div>
+
+            <div class="card-body">
+
+                <div class="row mb-3">
+
+                    <div class="col-md-6">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Search customer...">
+                    </div>
+
+                    <div class="col-md-3">
+                        <select class="form-select">
+                            <option>All Types</option>
+                            <option>Business</option>
+                            <option>Institution</option>
+                            <option>Residential</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <button class="btn btn-outline-success w-100">
+                            Search
+                        </button>
+                    </div>
+
+                </div>
+
+                <table class="table table-hover">
+
+                    <thead class="table-light">
+
+                        <tr>
+                            <th>#</th>
+                            <th>Customer Name</th>
+                            <th>Category</th>
+                            <th>Monthly Fee</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>ABC Hotel</td>
+                            <td>Business</td>
+                            <td>KES 3,000</td>
+                            <td>
+                                <span class="badge bg-success">
+                                    Active
+                                </span>
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn-primary">
+                                    View
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Eldoret School</td>
+                            <td>Institution</td>
+                            <td>KES 5,000</td>
+                            <td>
+                                <span class="badge bg-success">
+                                    Active
+                                </span>
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn-primary">
+                                    View
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>West Market Traders</td>
+                            <td>Market</td>
+                            <td>KES 2,500</td>
+                            <td>
+                                <span class="badge bg-warning">
+                                    Pending
+                                </span>
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn-primary">
+                                    View
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="col-md-4">
+
+        <div class="card shadow-sm border-0 mb-3">
+
+            <div class="card-header bg-primary text-white">
+                Revenue Module Overview
+            </div>
+
+            <div class="card-body">
+
+                <p>
+                    This module enables the county to manage
+                    all waste collection charges and improve
+                    revenue collection efficiency.
+                </p>
+
+                <ul>
+
+                    <li>Customer Registration</li>
+
+                    <li>Invoice Generation</li>
+
+                    <li>Payment Tracking</li>
+
+                    <li>Receipt Printing</li>
+
+                    <li>Outstanding Balances</li>
+
+                    <li>Revenue Analytics</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-warning">
+                Common County Challenges
+            </div>
+
+            <div class="card-body">
+
+                <ul>
+
+                    <li>Revenue leakage</li>
+
+                    <li>Manual record keeping</li>
+
+                    <li>Lost receipts</li>
+
+                    <li>Untracked customer accounts</li>
+
+                    <li>Delayed reporting</li>
+
+                </ul>
+
+                <hr>
+
+                <h6 class="text-success">
+                    Solution
+                </h6>
+
+                <p>
+                    The ERP digitizes billing and revenue
+                    processes, increasing transparency,
+                    accountability and collection rates.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- SAMPLE REVENUE TABLE -->
+
+<div class="card shadow-sm border-0 mt-4">
+
+    <div class="card-header bg-dark text-white">
+        Monthly Revenue Summary
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-bordered">
+
+            <thead>
+
+                <tr>
+                    <th>Month</th>
+                    <th>Invoices</th>
+                    <th>Collected</th>
+                    <th>Outstanding</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>January</td>
+                    <td>KES 1,200,000</td>
+                    <td>KES 1,050,000</td>
+                    <td>KES 150,000</td>
+                </tr>
+
+                <tr>
+                    <td>February</td>
+                    <td>KES 1,450,000</td>
+                    <td>KES 1,300,000</td>
+                    <td>KES 150,000</td>
+                </tr>
+
+                <tr>
+                    <td>March</td>
+                    <td>KES 1,800,000</td>
+                    <td>KES 1,650,000</td>
+                    <td>KES 150,000</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,313 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+        <h2 class="fw-bold text-danger">
+            <i class="fas fa-exclamation-circle"></i>
+            Citizen Complaints & Service Requests
+        </h2>
+
+        <p class="text-muted">
+            Track public complaints, illegal dumping reports, missed collections and service requests.
+        </p>
+    </div>
+
+    <button class="btn btn-danger">
+        <i class="fas fa-plus"></i>
+        New Complaint
+    </button>
+
+</div>
+
+<!-- KPI CARDS -->
+
+<div class="row mb-4">
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h6 class="text-muted">Total Complaints</h6>
+                <h2 class="fw-bold text-primary">1,245</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h6 class="text-muted">Open Cases</h6>
+                <h2 class="fw-bold text-danger">85</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h6 class="text-muted">Resolved Cases</h6>
+                <h2 class="fw-bold text-success">1,120</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h6 class="text-muted">Response Rate</h6>
+                <h2 class="fw-bold text-warning">90%</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <!-- LEFT SIDE -->
+
+    <div class="col-md-8">
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-danger text-white">
+                Complaint Register
+            </div>
+
+            <div class="card-body">
+
+                <div class="row mb-3">
+
+                    <div class="col-md-5">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Search complaint...">
+                    </div>
+
+                    <div class="col-md-3">
+                        <select class="form-select">
+                            <option>All Status</option>
+                            <option>Open</option>
+                            <option>In Progress</option>
+                            <option>Resolved</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <button class="btn btn-outline-danger w-100">
+                            Search
+                        </button>
+                    </div>
+
+                </div>
+
+                <table class="table table-hover">
+
+                    <thead class="table-light">
+
+                        <tr>
+                            <th>Ticket No</th>
+                            <th>Location</th>
+                            <th>Issue</th>
+                            <th>Reported By</th>
+                            <th>Status</th>
+                            <th>Assigned To</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>CMP001</td>
+                            <td>Langas</td>
+                            <td>Missed Collection</td>
+                            <td>Mary Chebet</td>
+                            <td>
+                                <span class="badge bg-warning">
+                                    In Progress
+                                </span>
+                            </td>
+                            <td>Waste Supervisor</td>
+                        </tr>
+
+                        <tr>
+                            <td>CMP002</td>
+                            <td>Eldoret CBD</td>
+                            <td>Illegal Dumping</td>
+                            <td>John Koech</td>
+                            <td>
+                                <span class="badge bg-danger">
+                                    Open
+                                </span>
+                            </td>
+                            <td>Environmental Officer</td>
+                        </tr>
+
+                        <tr>
+                            <td>CMP003</td>
+                            <td>Kapsoya</td>
+                            <td>Overflowing Bin</td>
+                            <td>Sarah Achieng</td>
+                            <td>
+                                <span class="badge bg-success">
+                                    Resolved
+                                </span>
+                            </td>
+                            <td>Collection Team</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="col-md-4">
+
+        <div class="card shadow-sm border-0 mb-3">
+
+            <div class="card-header bg-primary text-white">
+                Module Overview
+            </div>
+
+            <div class="card-body">
+
+                <p>
+                    Citizens can report waste-related issues through
+                    the system and track progress until resolution.
+                </p>
+
+                <ul>
+                    <li>Missed Waste Collection</li>
+                    <li>Illegal Dumping Reports</li>
+                    <li>Overflowing Waste Bins</li>
+                    <li>Service Requests</li>
+                    <li>Environmental Complaints</li>
+                    <li>Case Tracking</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-warning">
+                County Challenges Solved
+            </div>
+
+            <div class="card-body">
+
+                <ul>
+                    <li>Lost complaint records</li>
+                    <li>Delayed response times</li>
+                    <li>Poor accountability</li>
+                    <li>Citizen dissatisfaction</li>
+                    <li>No case tracking system</li>
+                </ul>
+
+                <hr>
+
+                <h6 class="text-success">
+                    Benefits
+                </h6>
+
+                <p>
+                    Every complaint receives a unique tracking
+                    number and remains visible until resolved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- COMPLAINT CATEGORIES -->
+
+<div class="card shadow-sm border-0 mt-4">
+
+    <div class="card-header bg-dark text-white">
+        Complaint Categories Summary
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-bordered">
+
+            <thead>
+
+                <tr>
+                    <th>Category</th>
+                    <th>Total Cases</th>
+                    <th>Resolved</th>
+                    <th>Open</th>
+                    <th>Resolution Rate</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Missed Collection</td>
+                    <td>450</td>
+                    <td>410</td>
+                    <td>40</td>
+                    <td>91%</td>
+                </tr>
+
+                <tr>
+                    <td>Illegal Dumping</td>
+                    <td>250</td>
+                    <td>210</td>
+                    <td>40</td>
+                    <td>84%</td>
+                </tr>
+
+                <tr>
+                    <td>Overflowing Bins</td>
+                    <td>320</td>
+                    <td>300</td>
+                    <td>20</td>
+                    <td>94%</td>
+                </tr>
+
+                <tr>
+                    <td>Service Requests</td>
+                    <td>225</td>
+                    <td>200</td>
+                    <td>25</td>
+                    <td>89%</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- DEMO TALKING POINTS -->
+
+<div class="alert alert-info mt-4">
+
+    <strong>Demo Explanation:</strong>
+
+    During the presentation, explain that residents can submit complaints through a web portal or mobile app. Each complaint is assigned to the responsible officer, monitored through its lifecycle, and reported on through management dashboards. This improves accountability, citizen satisfaction, and service delivery.
+
+</div>
+
+{% endblock %}

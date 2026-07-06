@@ -1,0 +1,305 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+        <h2 class="fw-bold text-primary">
+            <i class="fas fa-truck"></i>
+            Collection Management
+        </h2>
+
+        <p class="text-muted">
+            Manage waste collection routes, schedules, trucks, drivers and collection performance.
+        </p>
+    </div>
+
+    <button class="btn btn-primary">
+        <i class="fas fa-plus"></i>
+        Create Route
+    </button>
+
+</div>
+
+<!-- KPI CARDS -->
+
+<div class="row mb-4">
+
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h6 class="text-muted">Today's Routes</h6>
+                <h2 class="fw-bold text-primary">28</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h6 class="text-muted">Completed Routes</h6>
+                <h2 class="fw-bold text-success">20</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h6 class="text-muted">Pending Routes</h6>
+                <h2 class="fw-bold text-warning">6</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h6 class="text-muted">Waste Collected</h6>
+                <h2 class="fw-bold text-danger">350 Tons</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <!-- LEFT SIDE -->
+
+    <div class="col-md-8">
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-primary text-white">
+                Active Collection Routes
+            </div>
+
+            <div class="card-body">
+
+                <div class="row mb-3">
+
+                    <div class="col-md-6">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Search route...">
+                    </div>
+
+                    <div class="col-md-3">
+                        <select class="form-select">
+                            <option>All Status</option>
+                            <option>Completed</option>
+                            <option>In Progress</option>
+                            <option>Pending</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <button class="btn btn-outline-primary w-100">
+                            Filter
+                        </button>
+                    </div>
+
+                </div>
+
+                <table class="table table-hover">
+
+                    <thead class="table-light">
+
+                        <tr>
+                            <th>Route Code</th>
+                            <th>Area</th>
+                            <th>Truck</th>
+                            <th>Driver</th>
+                            <th>Status</th>
+                            <th>Waste</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>RT001</td>
+                            <td>Eldoret CBD</td>
+                            <td>KCG 001A</td>
+                            <td>John Kiprotich</td>
+                            <td>
+                                <span class="badge bg-success">
+                                    Completed
+                                </span>
+                            </td>
+                            <td>5 Tons</td>
+                        </tr>
+
+                        <tr>
+                            <td>RT002</td>
+                            <td>Langas</td>
+                            <td>KCG 002A</td>
+                            <td>Peter Kimani</td>
+                            <td>
+                                <span class="badge bg-warning">
+                                    In Progress
+                                </span>
+                            </td>
+                            <td>3 Tons</td>
+                        </tr>
+
+                        <tr>
+                            <td>RT003</td>
+                            <td>Kapsoya</td>
+                            <td>KCG 003A</td>
+                            <td>David Kiptoo</td>
+                            <td>
+                                <span class="badge bg-secondary">
+                                    Pending
+                                </span>
+                            </td>
+                            <td>0 Tons</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="col-md-4">
+
+        <div class="card shadow-sm border-0 mb-3">
+
+            <div class="card-header bg-success text-white">
+                Collection Module Overview
+            </div>
+
+            <div class="card-body">
+
+                <p>
+                    This module helps county waste officers
+                    manage all collection activities across
+                    wards, estates, institutions and business areas.
+                </p>
+
+                <ul>
+                    <li>Route Planning</li>
+                    <li>Truck Assignment</li>
+                    <li>Driver Assignment</li>
+                    <li>Collection Tracking</li>
+                    <li>Performance Monitoring</li>
+                    <li>Waste Quantity Reporting</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-warning">
+                Problems Solved
+            </div>
+
+            <div class="card-body">
+
+                <ul>
+                    <li>Missed collection routes</li>
+                    <li>Poor truck accountability</li>
+                    <li>Delayed collections</li>
+                    <li>No route monitoring</li>
+                    <li>Lack of operational data</li>
+                </ul>
+
+                <hr>
+
+                <h6 class="text-success">
+                    Benefits
+                </h6>
+
+                <p>
+                    Supervisors can monitor route completion,
+                    waste quantities collected and collection
+                    efficiency in real time.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- DAILY COLLECTION SUMMARY -->
+
+<div class="card shadow-sm border-0 mt-4">
+
+    <div class="card-header bg-dark text-white">
+        Daily Collection Summary
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-bordered">
+
+            <thead>
+
+                <tr>
+                    <th>Ward</th>
+                    <th>Planned Routes</th>
+                    <th>Completed</th>
+                    <th>Waste Collected</th>
+                    <th>Efficiency</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Eldoret CBD</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>45 Tons</td>
+                    <td>100%</td>
+                </tr>
+
+                <tr>
+                    <td>Langas</td>
+                    <td>6</td>
+                    <td>5</td>
+                    <td>30 Tons</td>
+                    <td>83%</td>
+                </tr>
+
+                <tr>
+                    <td>Kapsoya</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>22 Tons</td>
+                    <td>80%</td>
+                </tr>
+
+                <tr>
+                    <td>Pioneer</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>18 Tons</td>
+                    <td>100%</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}

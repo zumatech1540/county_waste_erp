@@ -1,0 +1,363 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+        <h2 class="fw-bold text-primary">
+            <i class="fas fa-truck"></i>
+            Fleet Management
+        </h2>
+
+        <p class="text-muted">
+            Manage waste collection vehicles, drivers, fuel consumption, maintenance schedules and operational performance.
+        </p>
+    </div>
+
+    <button class="btn btn-primary">
+        <i class="fas fa-plus"></i>
+        Register Vehicle
+    </button>
+
+</div>
+
+<!-- KPI CARDS -->
+
+<div class="row g-3 mb-4">
+
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm bg-primary text-white">
+            <div class="card-body">
+                <h6>Total Vehicles</h6>
+                <h2>24</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm bg-success text-white">
+            <div class="card-body">
+                <h6>Active Vehicles</h6>
+                <h2>18</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm bg-warning text-white">
+            <div class="card-body">
+                <h6>Under Service</h6>
+                <h2>4</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm bg-danger text-white">
+            <div class="card-body">
+                <h6>Fuel Cost (Month)</h6>
+                <h2>KES 1.2M</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <!-- VEHICLES TABLE -->
+
+    <div class="col-md-8">
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-primary text-white">
+                Fleet Register
+            </div>
+
+            <div class="card-body">
+
+                <div class="row mb-3">
+
+                    <div class="col-md-6">
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Search vehicle...">
+                    </div>
+
+                    <div class="col-md-3">
+                        <select class="form-select">
+                            <option>All Status</option>
+                            <option>Active</option>
+                            <option>Under Service</option>
+                            <option>Inactive</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <button class="btn btn-outline-primary w-100">
+                            Search
+                        </button>
+                    </div>
+
+                </div>
+
+                <table class="table table-hover">
+
+                    <thead class="table-light">
+
+                        <tr>
+                            <th>Vehicle No</th>
+                            <th>Type</th>
+                            <th>Driver</th>
+                            <th>Status</th>
+                            <th>Fuel (Month)</th>
+                            <th>Next Service</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>KCG 001A</td>
+                            <td>Compactor Truck</td>
+                            <td>John Kiprotich</td>
+                            <td>
+                                <span class="badge bg-success">
+                                    Active
+                                </span>
+                            </td>
+                            <td>650 Litres</td>
+                            <td>15 Aug 2026</td>
+                        </tr>
+
+                        <tr>
+                            <td>KCG 002A</td>
+                            <td>Skip Loader</td>
+                            <td>Peter Kimani</td>
+                            <td>
+                                <span class="badge bg-warning">
+                                    Service Due
+                                </span>
+                            </td>
+                            <td>520 Litres</td>
+                            <td>05 Jul 2026</td>
+                        </tr>
+
+                        <tr>
+                            <td>KCG 003A</td>
+                            <td>Collection Truck</td>
+                            <td>David Kiptoo</td>
+                            <td>
+                                <span class="badge bg-danger">
+                                    Under Repair
+                                </span>
+                            </td>
+                            <td>0 Litres</td>
+                            <td>In Workshop</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+
+    <div class="col-md-4">
+
+        <div class="card shadow-sm border-0 mb-3">
+
+            <div class="card-header bg-success text-white">
+                Fleet Module Overview
+            </div>
+
+            <div class="card-body">
+
+                <p>
+                    The Fleet Management Module helps county officers monitor and manage all waste collection vehicles.
+                </p>
+
+                <ul>
+                    <li>Vehicle Registration</li>
+                    <li>Driver Assignment</li>
+                    <li>Fuel Monitoring</li>
+                    <li>Maintenance Tracking</li>
+                    <li>Repair Management</li>
+                    <li>Fleet Performance Reports</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card shadow-sm border-0 mb-3">
+
+            <div class="card-header bg-warning">
+                Challenges Solved
+            </div>
+
+            <div class="card-body">
+
+                <ul>
+                    <li>Fuel theft and misuse</li>
+                    <li>Unplanned breakdowns</li>
+                    <li>Poor maintenance records</li>
+                    <li>Vehicle downtime</li>
+                    <li>Lack of accountability</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-info text-white">
+                Demo Talking Points
+            </div>
+
+            <div class="card-body">
+
+                <p>
+                    County management can view every vehicle, assigned driver, fuel usage and maintenance schedule from a single dashboard.
+                </p>
+
+                <hr>
+
+                <p>
+                    This helps reduce operational costs, improve accountability and maximize fleet availability.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- MAINTENANCE TABLE -->
+
+<div class="card shadow-sm border-0 mt-4">
+
+    <div class="card-header bg-dark text-white">
+        Upcoming Vehicle Maintenance Schedule
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-bordered">
+
+            <thead>
+
+                <tr>
+                    <th>Vehicle</th>
+                    <th>Service Type</th>
+                    <th>Scheduled Date</th>
+                    <th>Status</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>KCG 001A</td>
+                    <td>Routine Service</td>
+                    <td>15 Aug 2026</td>
+                    <td>
+                        <span class="badge bg-success">
+                            Scheduled
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>KCG 002A</td>
+                    <td>Engine Inspection</td>
+                    <td>05 Jul 2026</td>
+                    <td>
+                        <span class="badge bg-warning">
+                            Due
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>KCG 004A</td>
+                    <td>Brake Service</td>
+                    <td>20 Jul 2026</td>
+                    <td>
+                        <span class="badge bg-primary">
+                            Planned
+                        </span>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- FUEL SUMMARY -->
+
+<div class="card shadow-sm border-0 mt-4">
+
+    <div class="card-header bg-secondary text-white">
+        Monthly Fuel Consumption Summary
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-striped">
+
+            <thead>
+
+                <tr>
+                    <th>Vehicle</th>
+                    <th>Fuel Used</th>
+                    <th>Estimated Cost</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>KCG 001A</td>
+                    <td>650 Litres</td>
+                    <td>KES 123,500</td>
+                </tr>
+
+                <tr>
+                    <td>KCG 002A</td>
+                    <td>520 Litres</td>
+                    <td>KES 98,800</td>
+                </tr>
+
+                <tr>
+                    <td>KCG 005A</td>
+                    <td>700 Litres</td>
+                    <td>KES 133,000</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,410 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+        <h2 class="fw-bold text-dark">
+            <i class="fas fa-dumpster"></i>
+            Landfill & Disposal Site Management
+        </h2>
+
+        <p class="text-muted">
+            Monitor waste disposal activities, landfill capacity, truck entries and environmental compliance.
+        </p>
+    </div>
+
+    <button class="btn btn-dark">
+        <i class="fas fa-plus"></i>
+        Record Truck Entry
+    </button>
+
+</div>
+
+<!-- KPI SECTION -->
+
+<div class="row g-3 mb-4">
+
+    <div class="col-md-3">
+
+        <div class="card border-0 shadow-sm bg-dark text-white">
+
+            <div class="card-body">
+
+                <h6>Total Waste Today</h6>
+
+                <h2>125 Tons</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card border-0 shadow-sm bg-success text-white">
+
+            <div class="card-body">
+
+                <h6>Truck Entries</h6>
+
+                <h2>48</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card border-0 shadow-sm bg-warning text-white">
+
+            <div class="card-body">
+
+                <h6>Landfill Capacity Used</h6>
+
+                <h2>74%</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card border-0 shadow-sm bg-danger text-white">
+
+            <div class="card-body">
+
+                <h6>Environmental Alerts</h6>
+
+                <h2>3</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="row">
+
+    <!-- LEFT SIDE -->
+
+    <div class="col-md-8">
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-dark text-white">
+                Daily Truck Entry Register
+            </div>
+
+            <div class="card-body">
+
+                <table class="table table-hover">
+
+                    <thead class="table-light">
+
+                        <tr>
+                            <th>Ticket No</th>
+                            <th>Truck</th>
+                            <th>Source Area</th>
+                            <th>Waste Type</th>
+                            <th>Weight</th>
+                            <th>Time</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>LF001</td>
+                            <td>KCG 001A</td>
+                            <td>Eldoret CBD</td>
+                            <td>Mixed Waste</td>
+                            <td>5 Tons</td>
+                            <td>08:30 AM</td>
+                        </tr>
+
+                        <tr>
+                            <td>LF002</td>
+                            <td>KCG 004A</td>
+                            <td>Langas</td>
+                            <td>Organic Waste</td>
+                            <td>4 Tons</td>
+                            <td>09:15 AM</td>
+                        </tr>
+
+                        <tr>
+                            <td>LF003</td>
+                            <td>KCG 008A</td>
+                            <td>Kapsoya</td>
+                            <td>Mixed Waste</td>
+                            <td>6 Tons</td>
+                            <td>10:45 AM</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+
+    <div class="col-md-4">
+
+        <div class="card shadow-sm border-0 mb-3">
+
+            <div class="card-header bg-success text-white">
+                Module Overview
+            </div>
+
+            <div class="card-body">
+
+                <p>
+                    This module tracks all waste entering the county landfill and provides real-time monitoring of disposal operations.
+                </p>
+
+                <ul>
+
+                    <li>Truck Entry Tracking</li>
+
+                    <li>Waste Weighing</li>
+
+                    <li>Waste Classification</li>
+
+                    <li>Landfill Capacity Monitoring</li>
+
+                    <li>Environmental Compliance</li>
+
+                    <li>Regulatory Reporting</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-warning">
+                Problems Solved
+            </div>
+
+            <div class="card-body">
+
+                <ul>
+
+                    <li>Unknown waste volumes</li>
+
+                    <li>Poor dumpsite records</li>
+
+                    <li>Capacity planning issues</li>
+
+                    <li>Environmental monitoring gaps</li>
+
+                    <li>Manual reporting</li>
+
+                </ul>
+
+                <hr>
+
+                <h6 class="text-success">
+                    Benefits
+                </h6>
+
+                <p>
+                    County leadership can monitor disposal activities and plan future landfill expansion using accurate data.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- LANDFILL CAPACITY -->
+
+<div class="card shadow-sm border-0 mt-4">
+
+    <div class="card-header bg-primary text-white">
+        Landfill Capacity Monitoring
+    </div>
+
+    <div class="card-body">
+
+        <div class="progress mb-3" style="height:30px;">
+
+            <div class="progress-bar bg-warning"
+                 role="progressbar"
+                 style="width:74%;">
+
+                74% Used
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <h5>Total Capacity</h5>
+                <p>500,000 Tons</p>
+            </div>
+
+            <div class="col-md-4">
+                <h5>Current Usage</h5>
+                <p>370,000 Tons</p>
+            </div>
+
+            <div class="col-md-4">
+                <h5>Remaining Capacity</h5>
+                <p>130,000 Tons</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- WASTE TYPE SUMMARY -->
+
+<div class="card shadow-sm border-0 mt-4">
+
+    <div class="card-header bg-secondary text-white">
+        Waste Type Summary
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-bordered">
+
+            <thead>
+
+                <tr>
+                    <th>Waste Type</th>
+                    <th>Today's Quantity</th>
+                    <th>Percentage</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Mixed Waste</td>
+                    <td>70 Tons</td>
+                    <td>56%</td>
+                </tr>
+
+                <tr>
+                    <td>Organic Waste</td>
+                    <td>30 Tons</td>
+                    <td>24%</td>
+                </tr>
+
+                <tr>
+                    <td>Plastic Waste</td>
+                    <td>15 Tons</td>
+                    <td>12%</td>
+                </tr>
+
+                <tr>
+                    <td>Construction Waste</td>
+                    <td>10 Tons</td>
+                    <td>8%</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- ENVIRONMENTAL MONITORING -->
+
+<div class="card shadow-sm border-0 mt-4">
+
+    <div class="card-header bg-danger text-white">
+        Environmental Monitoring Alerts
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-striped">
+
+            <thead>
+
+                <tr>
+                    <th>Alert</th>
+                    <th>Area</th>
+                    <th>Status</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Leachate Monitoring Required</td>
+                    <td>Zone B</td>
+                    <td>
+                        <span class="badge bg-warning">
+                            Pending
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Methane Emission Check</td>
+                    <td>Zone C</td>
+                    <td>
+                        <span class="badge bg-danger">
+                            High Priority
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Groundwater Inspection</td>
+                    <td>Zone A</td>
+                    <td>
+                        <span class="badge bg-success">
+                            Completed
+                        </span>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<div class="alert alert-info mt-4">
+
+    <strong>Note:</strong>
+
+    every truck entering the landfill is recorded, weighed and classified. Management can monitor disposal trends, predict landfill lifespan, track environmental risks and generate compliance reports for environmental agencies.
+
+</div>
+
+{% endblock %}

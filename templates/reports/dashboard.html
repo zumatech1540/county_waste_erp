@@ -1,0 +1,371 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+        <h2 class="fw-bold text-primary">
+            <i class="fas fa-chart-bar"></i>
+            Reports & Analytics Center
+        </h2>
+
+        <p class="text-muted">
+            Comprehensive reporting and performance analytics for waste management operations.
+        </p>
+    </div>
+
+    <div>
+
+        <button class="btn btn-success me-2">
+            <i class="fas fa-file-excel"></i>
+            Export Excel
+        </button>
+
+        <button class="btn btn-danger">
+            <i class="fas fa-file-pdf"></i>
+            Export PDF
+        </button>
+
+    </div>
+
+</div>
+
+<!-- EXECUTIVE KPI CARDS -->
+
+<div class="row g-3 mb-4">
+
+    <div class="col-md-3">
+        <div class="card bg-success text-white border-0 shadow-sm">
+            <div class="card-body">
+                <h6>Total Revenue</h6>
+                <h2>KES 24.5M</h2>
+                <small>Current Financial Year</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-primary text-white border-0 shadow-sm">
+            <div class="card-body">
+                <h6>Waste Collected</h6>
+                <h2>12,850 Tons</h2>
+                <small>Current Financial Year</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-warning text-white border-0 shadow-sm">
+            <div class="card-body">
+                <h6>Recycling Rate</h6>
+                <h2>67%</h2>
+                <small>County Average</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-danger text-white border-0 shadow-sm">
+            <div class="card-body">
+                <h6>Citizen Satisfaction</h6>
+                <h2>91%</h2>
+                <small>Service Delivery Index</small>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <!-- REPORTS LIST -->
+
+    <div class="col-md-8">
+
+        <div class="card shadow-sm border-0 mb-4">
+
+            <div class="card-header bg-primary text-white">
+                Available Reports
+            </div>
+
+            <div class="card-body">
+
+                <table class="table table-hover">
+
+                    <thead class="table-light">
+
+                        <tr>
+                            <th>Report</th>
+                            <th>Category</th>
+                            <th>Frequency</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Revenue Collection Report</td>
+                            <td>Finance</td>
+                            <td>Monthly</td>
+                            <td>
+                                <button class="btn btn-sm btn-success">
+                                    View
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Waste Collection Performance</td>
+                            <td>Operations</td>
+                            <td>Weekly</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary">
+                                    View
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Fleet Utilization Report</td>
+                            <td>Fleet</td>
+                            <td>Monthly</td>
+                            <td>
+                                <button class="btn btn-sm btn-warning">
+                                    View
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Citizen Complaints Analysis</td>
+                            <td>Customer Service</td>
+                            <td>Monthly</td>
+                            <td>
+                                <button class="btn btn-sm btn-danger">
+                                    View
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Recycling Revenue Report</td>
+                            <td>Recycling</td>
+                            <td>Monthly</td>
+                            <td>
+                                <button class="btn btn-sm btn-dark">
+                                    View
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- PERFORMANCE TABLE -->
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-success text-white">
+                Ward Performance Analysis
+            </div>
+
+            <div class="card-body">
+
+                <table class="table table-bordered">
+
+                    <thead>
+
+                        <tr>
+                            <th>Ward</th>
+                            <th>Waste Collected</th>
+                            <th>Revenue</th>
+                            <th>Complaints</th>
+                            <th>Efficiency</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Eldoret CBD</td>
+                            <td>3,500 Tons</td>
+                            <td>KES 5.4M</td>
+                            <td>32</td>
+                            <td>98%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Langas</td>
+                            <td>2,850 Tons</td>
+                            <td>KES 4.1M</td>
+                            <td>45</td>
+                            <td>92%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Kapsoya</td>
+                            <td>2,200 Tons</td>
+                            <td>KES 3.5M</td>
+                            <td>21</td>
+                            <td>95%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Pioneer</td>
+                            <td>1,900 Tons</td>
+                            <td>KES 2.8M</td>
+                            <td>18</td>
+                            <td>97%</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="col-md-4">
+
+        <div class="card shadow-sm border-0 mb-3">
+
+            <div class="card-header bg-dark text-white">
+                Analytics Dashboard
+            </div>
+
+            <div class="card-body">
+
+                <ul>
+                    <li>Revenue Trends</li>
+                    <li>Collection Performance</li>
+                    <li>Fleet Utilization</li>
+                    <li>Complaint Resolution Rates</li>
+                    <li>Landfill Capacity Analysis</li>
+                    <li>Recycling Performance</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card shadow-sm border-0 mb-3">
+
+            <div class="card-header bg-warning">
+                Executive Insights
+            </div>
+
+            <div class="card-body">
+
+                <p>
+                    The analytics engine identifies operational trends,
+                    performance gaps and revenue opportunities.
+                </p>
+
+                <hr>
+
+                <h6>Highlights</h6>
+
+                <ul>
+                    <li>Revenue increased by 18%</li>
+                    <li>Complaints reduced by 24%</li>
+                    <li>Fleet efficiency improved by 12%</li>
+                    <li>Recycling revenue grew by 31%</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-info text-white">
+                Decision Support
+            </div>
+
+            <div class="card-body">
+
+                <p>
+                    This module provides evidence-based insights
+                    to support planning, budgeting and policy decisions.
+                </p>
+
+                <p>
+                    County leadership can quickly identify high-performing
+                    areas and locations requiring intervention.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CHART AREA -->
+
+<div class="card shadow-sm border-0 mt-4">
+
+    <div class="card-header bg-secondary text-white">
+        Revenue Trend Analysis
+    </div>
+
+    <div class="card-body">
+
+        <canvas id="revenueChart" height="100"></canvas>
+
+    </div>
+
+</div>
+
+<script>
+
+new Chart(
+document.getElementById('revenueChart'),
+{
+    type:'line',
+    data:{
+        labels:[
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun'
+        ],
+        datasets:[{
+            label:'Revenue (KES Millions)',
+            data:[3.2,4.1,4.8,5.5,6.1,7.0],
+            tension:0.4
+        }]
+    }
+}
+);
+
+</script>
+
+<!-- DEMO SECTION -->
+
+<div class="alert alert-primary mt-4">
+
+    <strong>Note</strong>
+
+    This module consolidates data from collection operations, fleet management, landfill management, recycling, billing and citizen complaints into executive reports. County leadership can monitor performance, identify inefficiencies, forecast future needs and make data-driven decisions.
+
+</div>
+
+{% endblock %}

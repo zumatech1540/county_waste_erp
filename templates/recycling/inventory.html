@@ -1,0 +1,385 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+        <h2 class="fw-bold text-success">
+            <i class="fas fa-recycle"></i>
+            Recycling & Circular Economy Management
+        </h2>
+
+        <p class="text-muted">
+            Manage recyclable waste collection, processing, inventory, sales and revenue generation.
+        </p>
+    </div>
+
+    <button class="btn btn-success">
+        <i class="fas fa-plus"></i>
+        Record Material Purchase
+    </button>
+
+</div>
+
+<!-- KPI SECTION -->
+
+<div class="row g-3 mb-4">
+
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm bg-success text-white">
+            <div class="card-body">
+                <h6>Materials Collected</h6>
+                <h2>285 Tons</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm bg-primary text-white">
+            <div class="card-body">
+                <h6>Inventory Value</h6>
+                <h2>KES 4.8M</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm bg-warning text-white">
+            <div class="card-body">
+                <h6>Monthly Sales</h6>
+                <h2>KES 2.1M</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card border-0 shadow-sm bg-danger text-white">
+            <div class="card-body">
+                <h6>Recycling Rate</h6>
+                <h2>67%</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <!-- MATERIAL INVENTORY -->
+
+    <div class="col-md-8">
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-success text-white">
+                Recyclable Materials Inventory
+            </div>
+
+            <div class="card-body">
+
+                <table class="table table-hover">
+
+                    <thead class="table-light">
+
+                        <tr>
+                            <th>Material</th>
+                            <th>Stock</th>
+                            <th>Unit</th>
+                            <th>Unit Price</th>
+                            <th>Total Value</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>PET Plastic</td>
+                            <td>12,500</td>
+                            <td>Kg</td>
+                            <td>KES 35</td>
+                            <td>KES 437,500</td>
+                            <td>
+                                <span class="badge bg-success">
+                                    Available
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>HDPE Plastic</td>
+                            <td>8,400</td>
+                            <td>Kg</td>
+                            <td>KES 45</td>
+                            <td>KES 378,000</td>
+                            <td>
+                                <span class="badge bg-success">
+                                    Available
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Cardboard</td>
+                            <td>15,000</td>
+                            <td>Kg</td>
+                            <td>KES 18</td>
+                            <td>KES 270,000</td>
+                            <td>
+                                <span class="badge bg-primary">
+                                    Processing
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Scrap Metal</td>
+                            <td>5,300</td>
+                            <td>Kg</td>
+                            <td>KES 55</td>
+                            <td>KES 291,500</td>
+                            <td>
+                                <span class="badge bg-success">
+                                    Available
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+
+    <div class="col-md-4">
+
+        <div class="card shadow-sm border-0 mb-3">
+
+            <div class="card-header bg-primary text-white">
+                Module Overview
+            </div>
+
+            <div class="card-body">
+
+                <p>
+                    This module helps counties track recyclable materials from collection to sale.
+                </p>
+
+                <ul>
+                    <li>Material Purchases</li>
+                    <li>Sorting & Processing</li>
+                    <li>Inventory Management</li>
+                    <li>Sales Management</li>
+                    <li>Revenue Tracking</li>
+                    <li>Recycling Analytics</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-warning">
+                County Benefits
+            </div>
+
+            <div class="card-body">
+
+                <ul>
+                    <li>Reduced landfill burden</li>
+                    <li>Additional county revenue</li>
+                    <li>Job creation opportunities</li>
+                    <li>Environmental conservation</li>
+                    <li>Improved sustainability</li>
+                </ul>
+
+                <hr>
+
+                <h6 class="text-success">
+                    Demo Message
+                </h6>
+
+                <p>
+                    Waste should not only be disposed of. It should be transformed into a valuable economic resource.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- PROCESSING OPERATIONS -->
+
+<div class="card shadow-sm border-0 mt-4">
+
+    <div class="card-header bg-dark text-white">
+        Processing Operations
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-bordered">
+
+            <thead>
+
+                <tr>
+                    <th>Batch No</th>
+                    <th>Material</th>
+                    <th>Input Weight</th>
+                    <th>Output Weight</th>
+                    <th>Status</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>PROC001</td>
+                    <td>PET Plastic</td>
+                    <td>5,000 Kg</td>
+                    <td>4,650 Kg</td>
+                    <td>
+                        <span class="badge bg-success">
+                            Completed
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>PROC002</td>
+                    <td>Cardboard</td>
+                    <td>3,500 Kg</td>
+                    <td>3,200 Kg</td>
+                    <td>
+                        <span class="badge bg-warning">
+                            In Progress
+                        </span>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- SALES REGISTER -->
+
+<div class="card shadow-sm border-0 mt-4">
+
+    <div class="card-header bg-secondary text-white">
+        Recent Recycling Sales
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-striped">
+
+            <thead>
+
+                <tr>
+                    <th>Date</th>
+                    <th>Buyer</th>
+                    <th>Material</th>
+                    <th>Quantity</th>
+                    <th>Amount</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>05 Jul 2026</td>
+                    <td>EcoPlast Ltd</td>
+                    <td>PET Plastic</td>
+                    <td>4,000 Kg</td>
+                    <td>KES 140,000</td>
+                </tr>
+
+                <tr>
+                    <td>03 Jul 2026</td>
+                    <td>Green Paper Mills</td>
+                    <td>Cardboard</td>
+                    <td>6,000 Kg</td>
+                    <td>KES 108,000</td>
+                </tr>
+
+                <tr>
+                    <td>01 Jul 2026</td>
+                    <td>Metal Works Kenya</td>
+                    <td>Scrap Metal</td>
+                    <td>2,000 Kg</td>
+                    <td>KES 110,000</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- RECYCLING IMPACT -->
+
+<div class="card shadow-sm border-0 mt-4">
+
+    <div class="card-header bg-info text-white">
+        Environmental Impact Summary
+    </div>
+
+    <div class="card-body">
+
+        <div class="row text-center">
+
+            <div class="col-md-3">
+                <h3 class="text-success">285</h3>
+                <p>Tons Recycled</p>
+            </div>
+
+            <div class="col-md-3">
+                <h3 class="text-primary">67%</h3>
+                <p>Recovery Rate</p>
+            </div>
+
+            <div class="col-md-3">
+                <h3 class="text-warning">KES 2.1M</h3>
+                <p>Revenue Generated</p>
+            </div>
+
+            <div class="col-md-3">
+                <h3 class="text-danger">180</h3>
+                <p>Tons Diverted from Landfill</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="alert alert-success mt-4">
+
+    <strong>Note:</strong>
+
+    this module enables counties to turn waste into a revenue-generating asset by tracking recyclable materials from collection, processing and storage to final sale. It supports circular economy initiatives while reducing landfill pressure and improving environmental sustainability.
+
+</div>
+
+{% endblock %}

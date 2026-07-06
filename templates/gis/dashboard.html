@@ -1,0 +1,335 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+        <h2 class="fw-bold text-success">
+            <i class="fas fa-map-marked-alt"></i>
+            GIS & Smart Monitoring Center
+        </h2>
+
+        <p class="text-muted">
+            Geographic monitoring of waste collection routes, illegal dumping sites, complaints and operational zones.
+        </p>
+    </div>
+
+    <button class="btn btn-success">
+        <i class="fas fa-location-arrow"></i>
+        Live Tracking
+    </button>
+
+</div>
+
+<!-- KPI CARDS -->
+
+<div class="row g-3 mb-4">
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 bg-success text-white">
+            <div class="card-body">
+                <h6>Collection Zones</h6>
+                <h2>32</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 bg-primary text-white">
+            <div class="card-body">
+                <h6>Tracked Vehicles</h6>
+                <h2>18</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 bg-warning text-white">
+            <div class="card-body">
+                <h6>Illegal Dump Sites</h6>
+                <h2>24</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 bg-danger text-white">
+            <div class="card-body">
+                <h6>Open GIS Cases</h6>
+                <h2>12</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <!-- MAP AREA -->
+
+    <div class="col-md-8">
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-success text-white">
+                County Waste Operations Map
+            </div>
+
+            <div class="card-body p-0">
+
+                <div style="
+                    height:550px;
+                    background:#eef5ee;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    flex-direction:column;
+                    border-radius:0 0 5px 5px;
+                ">
+
+                    <i class="fas fa-map-marked-alt fa-5x text-success mb-3"></i>
+
+                    <h4>Interactive GIS Map</h4>
+
+                    <p class="text-muted">
+                        Collection Routes • Trucks • Complaints • Illegal Dumpsites
+                    </p>
+
+                    <p class="text-center px-4">
+                        During implementation this area will integrate
+                        Google Maps or Leaflet GIS services to provide
+                        real-time monitoring and visualization.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+
+    <div class="col-md-4">
+
+        <div class="card shadow-sm border-0 mb-3">
+
+            <div class="card-header bg-primary text-white">
+                GIS Features
+            </div>
+
+            <div class="card-body">
+
+                <ul>
+                    <li>Waste Collection Zones</li>
+                    <li>Truck Tracking</li>
+                    <li>Complaint Locations</li>
+                    <li>Illegal Dump Site Mapping</li>
+                    <li>Landfill Monitoring</li>
+                    <li>Route Optimization</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card shadow-sm border-0 mb-3">
+
+            <div class="card-header bg-warning">
+                Challenges Solved
+            </div>
+
+            <div class="card-body">
+
+                <ul>
+                    <li>No visibility of operations</li>
+                    <li>Missed collection zones</li>
+                    <li>Poor route planning</li>
+                    <li>Unidentified dumping hotspots</li>
+                    <li>Lack of location intelligence</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-info text-white">
+                Executive Insights
+            </div>
+
+            <div class="card-body">
+
+                <p>
+                    GIS enables county leadership to visualize
+                    operational activities geographically and
+                    make faster decisions based on location data.
+                </p>
+
+                <hr>
+
+                <p>
+                    Managers can identify underserved areas,
+                    optimize routes and reduce operational costs.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- HOTSPOTS -->
+
+<div class="card shadow-sm border-0 mt-4">
+
+    <div class="card-header bg-dark text-white">
+        Illegal Dumping Hotspots
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-hover">
+
+            <thead>
+
+                <tr>
+                    <th>Location</th>
+                    <th>Ward</th>
+                    <th>Reports</th>
+                    <th>Risk Level</th>
+                    <th>Status</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Langas Market Area</td>
+                    <td>Langas</td>
+                    <td>12</td>
+                    <td>
+                        <span class="badge bg-danger">
+                            High
+                        </span>
+                    </td>
+                    <td>Under Investigation</td>
+                </tr>
+
+                <tr>
+                    <td>Kapsoya River Bank</td>
+                    <td>Kapsoya</td>
+                    <td>8</td>
+                    <td>
+                        <span class="badge bg-warning">
+                            Medium
+                        </span>
+                    </td>
+                    <td>Scheduled Cleanup</td>
+                </tr>
+
+                <tr>
+                    <td>Pioneer Estate</td>
+                    <td>Pioneer</td>
+                    <td>4</td>
+                    <td>
+                        <span class="badge bg-success">
+                            Low
+                        </span>
+                    </td>
+                    <td>Resolved</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- ROUTE MONITORING -->
+
+<div class="card shadow-sm border-0 mt-4">
+
+    <div class="card-header bg-secondary text-white">
+        Route Monitoring Summary
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-bordered">
+
+            <thead>
+
+                <tr>
+                    <th>Route</th>
+                    <th>Ward</th>
+                    <th>Assigned Truck</th>
+                    <th>Status</th>
+                    <th>Completion</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Route A</td>
+                    <td>Eldoret CBD</td>
+                    <td>KCG 001A</td>
+                    <td>
+                        <span class="badge bg-success">
+                            Completed
+                        </span>
+                    </td>
+                    <td>100%</td>
+                </tr>
+
+                <tr>
+                    <td>Route B</td>
+                    <td>Langas</td>
+                    <td>KCG 002A</td>
+                    <td>
+                        <span class="badge bg-warning">
+                            In Progress
+                        </span>
+                    </td>
+                    <td>75%</td>
+                </tr>
+
+                <tr>
+                    <td>Route C</td>
+                    <td>Kapsoya</td>
+                    <td>KCG 003A</td>
+                    <td>
+                        <span class="badge bg-primary">
+                            Scheduled
+                        </span>
+                    </td>
+                    <td>0%</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<div class="alert alert-success mt-4">
+
+    <strong>Note:</strong>
+
+    in the production version, this module can integrate with GPS devices installed in collection trucks, Google Maps, ArcGIS, or Leaflet to provide real-time vehicle tracking, route optimization and hotspot analysis.
+
+</div>
+
+{% endblock %}

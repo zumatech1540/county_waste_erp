@@ -1,0 +1,351 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+        <h2 class="fw-bold text-success">
+            <i class="fas fa-chart-line"></i>
+            Executive Waste Management Dashboard
+        </h2>
+
+        <p class="text-muted">
+            Real-time overview of county waste collection, revenue performance, fleet operations and citizen services.
+        </p>
+    </div>
+
+    <div>
+        <button class="btn btn-success">
+            <i class="fas fa-download"></i>
+            Export Report
+        </button>
+    </div>
+
+</div>
+
+<!-- KPI CARDS -->
+
+<div class="row g-3 mb-4">
+
+    <div class="col-md-3">
+
+        <div class="card border-0 shadow-sm bg-success text-white">
+
+            <div class="card-body">
+
+                <div class="d-flex justify-content-between">
+
+                    <div>
+                        <small>Total Revenue</small>
+                        <h3 class="fw-bold">KES 24.5M</h3>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-money-bill-wave fa-2x"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card border-0 shadow-sm bg-primary text-white">
+
+            <div class="card-body">
+
+                <div class="d-flex justify-content-between">
+
+                    <div>
+                        <small>Waste Collected</small>
+                        <h3 class="fw-bold">350 Tons</h3>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-recycle fa-2x"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card border-0 shadow-sm bg-warning text-white">
+
+            <div class="card-body">
+
+                <div class="d-flex justify-content-between">
+
+                    <div>
+                        <small>Open Complaints</small>
+                        <h3 class="fw-bold">45</h3>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-exclamation-circle fa-2x"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card border-0 shadow-sm bg-danger text-white">
+
+            <div class="card-body">
+
+                <div class="d-flex justify-content-between">
+
+                    <div>
+                        <small>Active Trucks</small>
+                        <h3 class="fw-bold">12</h3>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-truck fa-2x"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- SECOND ROW -->
+
+<div class="row g-3 mb-4">
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h6 class="text-muted">Registered Customers</h6>
+                <h3>1,245</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h6 class="text-muted">Recycling Rate</h6>
+                <h3>67%</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h6 class="text-muted">Collection Efficiency</h6>
+                <h3>92%</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h6 class="text-muted">Landfill Capacity</h6>
+                <h3>74%</h3>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <!-- CHARTS -->
+
+    <div class="col-md-8">
+
+        <div class="card shadow-sm border-0 mb-4">
+
+            <div class="card-header bg-success text-white">
+                Monthly Revenue Performance
+            </div>
+
+            <div class="card-body">
+
+                <canvas id="revenueChart"></canvas>
+
+            </div>
+
+        </div>
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-primary text-white">
+                Waste Collection by Ward
+            </div>
+
+            <div class="card-body">
+
+                <table class="table table-hover">
+
+                    <thead>
+
+                        <tr>
+                            <th>Ward</th>
+                            <th>Waste Collected</th>
+                            <th>Efficiency</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Eldoret CBD</td>
+                            <td>85 Tons</td>
+                            <td>98%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Langas</td>
+                            <td>65 Tons</td>
+                            <td>90%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Kapsoya</td>
+                            <td>50 Tons</td>
+                            <td>88%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Pioneer</td>
+                            <td>40 Tons</td>
+                            <td>95%</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+
+    <div class="col-md-4">
+
+        <div class="card shadow-sm border-0 mb-3">
+
+            <div class="card-header bg-dark text-white">
+                System Overview
+            </div>
+
+            <div class="card-body">
+
+                <p>
+                    This dashboard gives county leadership a complete overview of waste management operations.
+                </p>
+
+                <ul>
+                    <li>Revenue Collection</li>
+                    <li>Waste Collection Operations</li>
+                    <li>Citizen Complaints</li>
+                    <li>Fleet Management</li>
+                    <li>Recycling Programs</li>
+                    <li>Landfill Monitoring</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card shadow-sm border-0 mb-3">
+
+            <div class="card-header bg-warning">
+                Key Challenges Solved
+            </div>
+
+            <div class="card-body">
+
+                <ul>
+                    <li>Revenue leakage</li>
+                    <li>Missed collections</li>
+                    <li>Poor reporting</li>
+                    <li>Lack of accountability</li>
+                    <li>Manual record keeping</li>
+                    <li>Slow decision making</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-header bg-info text-white">
+                Executive Summary
+            </div>
+
+            <div class="card-body">
+
+                <h6>Today's Operations</h6>
+
+                <p>
+                    28 routes scheduled, 20 completed, 350 tons collected and 12 active trucks currently operating.
+                </p>
+
+                <hr>
+
+                <h6>Citizen Services</h6>
+
+                <p>
+                    45 open complaints requiring action by waste management officers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CHART -->
+
+<script>
+
+new Chart(
+document.getElementById('revenueChart'),
+{
+    type:'bar',
+    data:{
+        labels:['Jan','Feb','Mar','Apr','May','Jun'],
+        datasets:[{
+            label:'Revenue (KES)',
+            data:[500000,700000,900000,1200000,1500000,2450000]
+        }]
+    }
+}
+);
+
+</script>
+
+{% endblock %}
