@@ -16,21 +16,78 @@
     <style>
 
         body{
+            margin:0;
+            padding:0;
             background:#f4f6f9;
             overflow-x:hidden;
+            font-family:Arial, sans-serif;
         }
 
-        /* DESKTOP SIDEBAR */
+        /* SIDEBAR */
 
         .sidebar{
             position:fixed;
             top:0;
             left:0;
-            width:260px;
+            width:250px;
             height:100vh;
             background:linear-gradient(180deg,#198754,#146c43);
             overflow-y:auto;
             z-index:1000;
+        }
+
+        .sidebar::-webkit-scrollbar{
+            width:6px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb{
+            background:rgba(255,255,255,.3);
+            border-radius:10px;
+        }
+
+        .logo-box{
+            text-align:center;
+            padding:20px;
+            border-bottom:1px solid rgba(255,255,255,.2);
+        }
+
+        .logo-box h4{
+            color:white;
+            margin-bottom:5px;
+            font-weight:bold;
+        }
+
+        .logo-box p{
+            color:#d8f3dc;
+            font-size:12px;
+            margin:0;
+        }
+
+        .user-box{
+            text-align:center;
+            padding:20px;
+        }
+
+        .user-avatar{
+            width:70px;
+            height:70px;
+            border-radius:50%;
+            background:white;
+            color:#198754;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin:auto;
+            font-size:30px;
+        }
+
+        .menu-title{
+            color:#d8f3dc;
+            font-size:12px;
+            text-transform:uppercase;
+            padding-left:20px;
+            margin-top:15px;
+            margin-bottom:10px;
         }
 
         .sidebar a{
@@ -51,54 +108,15 @@
             width:25px;
         }
 
-        .logo-box{
-            padding:25px;
-            text-align:center;
-            border-bottom:1px solid rgba(255,255,255,.2);
-        }
-
-        .logo-box h4{
-            color:white;
-        }
-
-        .logo-box p{
-            color:#d8f3dc;
-            margin:0;
-            font-size:13px;
-        }
-
-        .user-box{
-            text-align:center;
-            padding:20px;
-        }
-
-        .user-avatar{
-            width:70px;
-            height:70px;
-            background:white;
-            color:#198754;
-            border-radius:50%;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            margin:auto;
-            font-size:30px;
-        }
-
-        .menu-title{
-            color:#d8f3dc;
-            font-size:12px;
-            padding-left:20px;
-            margin-top:15px;
-            text-transform:uppercase;
-        }
-
-        /* CONTENT */
+        /* MAIN CONTENT */
 
         .main-content{
-            margin-left:260px;
+            margin-left:250px;
+            width:calc(100% - 250px);
             min-height:100vh;
         }
+
+        /* TOPBAR */
 
         .topbar{
             background:white;
@@ -114,11 +132,10 @@
             color:white;
             padding:8px 15px;
             border-radius:20px;
+            font-size:13px;
         }
 
-        .content-area{
-            padding:20px;
-        }
+        /* STATS */
 
         .quick-stat{
             background:white;
@@ -131,6 +148,13 @@
 
         .quick-stat h6{
             color:#6c757d;
+            margin-bottom:10px;
+        }
+
+        /* CONTENT */
+
+        .content-area{
+            padding:20px;
         }
 
         .card{
@@ -144,25 +168,56 @@
         @media(max-width:991px){
 
             .sidebar{
+                width:80px;
+            }
+
+            .sidebar .menu-title,
+            .sidebar .logo-box p,
+            .sidebar .user-box h6{
                 display:none;
+            }
+
+            .sidebar a{
+                text-align:center;
+                padding:15px 5px;
+                margin:5px;
+            }
+
+            .sidebar a span{
+                display:none;
+            }
+
+            .sidebar i{
+                width:auto;
+                font-size:20px;
+            }
+
+            .user-avatar{
+                width:50px;
+                height:50px;
+                font-size:20px;
             }
 
             .main-content{
-                margin-left:0;
-            }
-
-            .content-area{
-                padding:15px;
+                margin-left:80px;
+                width:calc(100% - 80px);
             }
 
             .topbar{
-                display:none;
+                padding:10px;
+            }
+
+            .content-area{
+                padding:10px;
             }
 
             .quick-stat h4{
-                font-size:18px;
+                font-size:16px;
             }
 
+            .quick-stat h6{
+                font-size:12px;
+            }
         }
 
     </style>
@@ -171,103 +226,16 @@
 
 <body>
 
-<!-- MOBILE NAVBAR -->
+<!-- SIDEBAR -->
 
-<nav class="navbar navbar-dark bg-success d-lg-none sticky-top">
-
-    <div class="container-fluid">
-
-        <button class="btn btn-light"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#mobileSidebar">
-
-            <i class="fas fa-bars"></i>
-
-        </button>
-
-        <span class="navbar-brand">
-            Waste ERP
-        </span>
-
-    </div>
-
-</nav>
-
-<!-- MOBILE SIDEBAR -->
-
-<div class="offcanvas offcanvas-start text-bg-success"
-     tabindex="-1"
-     id="mobileSidebar">
-
-    <div class="offcanvas-header">
-
-        <h5 class="offcanvas-title">
-            <i class="fas fa-recycle"></i>
-            Waste ERP
-        </h5>
-
-        <button type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="offcanvas">
-        </button>
-
-    </div>
-
-    <div class="offcanvas-body">
-
-        <a href="{% url 'dashboard' %}" class="nav-link text-white">
-            <i class="fas fa-chart-line"></i> Dashboard
-        </a>
-
-        <a href="{% url 'customers' %}" class="nav-link text-white">
-            <i class="fas fa-money-bill-wave"></i> Billing
-        </a>
-
-        <a href="{% url 'routes' %}" class="nav-link text-white">
-            <i class="fas fa-truck-loading"></i> Collection
-        </a>
-
-        <a href="{% url 'complaints' %}" class="nav-link text-white">
-            <i class="fas fa-exclamation-circle"></i> Complaints
-        </a>
-
-        <a href="{% url 'vehicles' %}" class="nav-link text-white">
-            <i class="fas fa-truck"></i> Fleet
-        </a>
-
-        <a href="{% url 'inventory' %}" class="nav-link text-white">
-            <i class="fas fa-recycle"></i> Recycling
-        </a>
-
-        <a href="{% url 'truck_entries' %}" class="nav-link text-white">
-            <i class="fas fa-dumpster"></i> Landfill
-        </a>
-
-        <a href="{% url 'gis_dashboard' %}" class="nav-link text-white">
-            <i class="fas fa-map-marked-alt"></i> GIS Mapping
-        </a>
-
-        <a href="{% url 'reports_dashboard' %}" class="nav-link text-white">
-            <i class="fas fa-chart-pie"></i> Reports
-        </a>
-
-    </div>
-
-</div>
-
-<!-- DESKTOP SIDEBAR -->
-
-<div class="sidebar d-none d-lg-block">
+<div class="sidebar">
 
     <div class="logo-box">
-
         <h4>
             <i class="fas fa-recycle"></i>
-            Waste ERP
+            <span>Waste ERP</span>
         </h4>
-
-        <p>County Waste Management System</p>
-
+        <p>County Waste Management</p>
     </div>
 
     <div class="user-box">
@@ -277,7 +245,7 @@
         </div>
 
         <h6 class="text-white mt-3">
-            County Administrator
+            Administrator
         </h6>
 
     </div>
@@ -288,48 +256,91 @@
 
     <a href="{% url 'dashboard' %}">
         <i class="fas fa-chart-line"></i>
-        Executive Dashboard
+        <span>Executive Dashboard</span>
     </a>
 
     <a href="{% url 'customers' %}">
         <i class="fas fa-money-bill-wave"></i>
-        Billing & Revenue
+        <span>Billing & Revenue</span>
     </a>
 
     <a href="{% url 'routes' %}">
         <i class="fas fa-truck-loading"></i>
-        Collection Management
+        <span>Collection Management</span>
     </a>
 
     <a href="{% url 'complaints' %}">
         <i class="fas fa-exclamation-circle"></i>
-        Citizen Complaints
+        <span>Citizen Complaints</span>
     </a>
 
     <a href="{% url 'vehicles' %}">
         <i class="fas fa-truck"></i>
-        Fleet Management
+        <span>Fleet Management</span>
     </a>
 
     <a href="{% url 'inventory' %}">
         <i class="fas fa-recycle"></i>
-        Recycling Management
+        <span>Recycling Management</span>
     </a>
 
     <a href="{% url 'truck_entries' %}">
         <i class="fas fa-dumpster"></i>
-        Landfill Management
+        <span>Landfill Management</span>
     </a>
 
     <a href="{% url 'gis_dashboard' %}">
         <i class="fas fa-map-marked-alt"></i>
-        GIS Mapping
+        <span>GIS Mapping</span>
     </a>
 
     <a href="{% url 'reports_dashboard' %}">
         <i class="fas fa-chart-pie"></i>
-        Reports & Analytics
+        <span>Reports & Analytics</span>
     </a>
+
+    <hr class="text-white">
+
+    <div class="menu-title">
+        Future Modules
+    </div>
+
+    <a href="#">
+        <i class="fas fa-microchip"></i>
+        <span>Smart Bins</span>
+    </a>
+
+    <a href="#">
+        <i class="fas fa-users"></i>
+        <span>Staff & HR</span>
+    </a>
+
+    <a href="#">
+        <i class="fas fa-boxes"></i>
+        <span>Procurement</span>
+    </a>
+
+    <a href="#">
+        <i class="fas fa-leaf"></i>
+        <span>Environmental</span>
+    </a>
+
+    <a href="#">
+        <i class="fas fa-globe"></i>
+        <span>Citizen Portal</span>
+    </a>
+
+    <a href="#">
+        <i class="fas fa-brain"></i>
+        <span>AI Analytics</span>
+    </a>
+
+    <a href="#">
+        <i class="fas fa-cog"></i>
+        <span>Settings</span>
+    </a>
+
+    <br><br><br>
 
 </div>
 
@@ -337,24 +348,33 @@
 
 <div class="main-content">
 
+    <!-- TOPBAR -->
+
     <div class="topbar">
 
         <div class="d-flex justify-content-between align-items-center">
 
             <div>
-                <h4 class="mb-0">County Waste Management ERP</h4>
+                <h4 class="mb-0">
+                    County Waste Management ERP
+                </h4>
+
                 <small class="text-muted">
                     Smart Waste Operations Platform
                 </small>
             </div>
 
-            <span class="county-badge">
-                County Government Demo
-            </span>
+            <div>
+                <span class="county-badge">
+                    County Government Demo
+                </span>
+            </div>
 
         </div>
 
     </div>
+
+    <!-- QUICK STATS -->
 
     <div class="container-fluid mt-3">
 
@@ -370,7 +390,7 @@
             <div class="col-6 col-lg-3">
                 <div class="quick-stat">
                     <h6>Waste Collected</h6>
-                    <h4 class="text-primary">12,850T</h4>
+                    <h4 class="text-primary">12,850 T</h4>
                 </div>
             </div>
 
@@ -392,6 +412,8 @@
 
     </div>
 
+    <!-- PAGE CONTENT -->
+
     <div class="content-area">
 
         {% block content %}
@@ -400,8 +422,6 @@
     </div>
 
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
