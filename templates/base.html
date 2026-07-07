@@ -16,142 +16,45 @@
     <style>
 
         body{
-            margin:0;
-            padding:0;
             background:#f4f6f9;
-            overflow-x:hidden;
-            font-family:Arial, sans-serif;
         }
 
-        /* SIDEBAR */
-
-        .sidebar{
-            position:fixed;
-            top:0;
-            left:0;
-            width:250px;
-            height:100vh;
-            background:linear-gradient(180deg,#198754,#146c43);
-            overflow-y:auto;
-            z-index:1000;
+        .navbar-custom{
+            background:linear-gradient(90deg,#198754,#146c43);
+            box-shadow:0 2px 10px rgba(0,0,0,.1);
         }
 
-        .sidebar::-webkit-scrollbar{
-            width:6px;
-        }
-
-        .sidebar::-webkit-scrollbar-thumb{
-            background:rgba(255,255,255,.3);
-            border-radius:10px;
-        }
-
-        .logo-box{
-            text-align:center;
-            padding:20px;
-            border-bottom:1px solid rgba(255,255,255,.2);
-        }
-
-        .logo-box h4{
-            color:white;
-            margin-bottom:5px;
+        .navbar-brand{
             font-weight:bold;
+            color:white !important;
         }
 
-        .logo-box p{
-            color:#d8f3dc;
-            font-size:12px;
-            margin:0;
+        .nav-link{
+            color:white !important;
+            font-weight:500;
         }
 
-        .user-box{
-            text-align:center;
-            padding:20px;
-        }
-
-        .user-avatar{
-            width:70px;
-            height:70px;
-            border-radius:50%;
-            background:white;
-            color:#198754;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            margin:auto;
-            font-size:30px;
-        }
-
-        .menu-title{
-            color:#d8f3dc;
-            font-size:12px;
-            text-transform:uppercase;
-            padding-left:20px;
-            margin-top:15px;
-            margin-bottom:10px;
-        }
-
-        .sidebar a{
-            display:block;
-            color:white;
-            text-decoration:none;
-            padding:12px 18px;
-            margin:5px 10px;
-            border-radius:10px;
-            transition:.3s;
-        }
-
-        .sidebar a:hover{
-            background:rgba(255,255,255,.15);
-        }
-
-        .sidebar i{
-            width:25px;
-        }
-
-        /* MAIN CONTENT */
-
-        .main-content{
-            margin-left:250px;
-            width:calc(100% - 250px);
-            min-height:100vh;
-        }
-
-        /* TOPBAR */
-
-        .topbar{
-            background:white;
-            padding:15px 25px;
-            box-shadow:0 2px 10px rgba(0,0,0,.08);
-            position:sticky;
-            top:0;
-            z-index:999;
+        .nav-link:hover{
+            color:#d8f3dc !important;
         }
 
         .county-badge{
-            background:#198754;
-            color:white;
+            background:white;
+            color:#198754;
             padding:8px 15px;
             border-radius:20px;
             font-size:13px;
+            font-weight:bold;
         }
-
-        /* STATS */
 
         .quick-stat{
             background:white;
             border-radius:15px;
-            padding:15px;
+            padding:20px;
             text-align:center;
             box-shadow:0 2px 8px rgba(0,0,0,.08);
             height:100%;
         }
-
-        .quick-stat h6{
-            color:#6c757d;
-            margin-bottom:10px;
-        }
-
-        /* CONTENT */
 
         .content-area{
             padding:20px;
@@ -163,270 +66,144 @@
             box-shadow:0 2px 8px rgba(0,0,0,.08);
         }
 
-        /* MOBILE */
-
-        @media(max-width:991px){
-
-    .sidebar{
-        width:220px;
-    }
-
-    .sidebar .menu-title{
-        display:block;
-    }
-
-    .sidebar .logo-box p{
-        display:block;
-    }
-
-    .sidebar .user-box h6{
-        display:block;
-    }
-
-    .sidebar a{
-        text-align:left;
-        padding:12px 18px;
-        margin:5px 10px;
-    }
-
-    .sidebar a span{
-        display:inline;
-    }
-
-    .sidebar i{
-        width:25px;
-        font-size:16px;
-    }
-
-    .user-avatar{
-        width:60px;
-        height:60px;
-        font-size:25px;
-    }
-
-    .main-content{
-        margin-left:220px;
-        width:calc(100% - 220px);
-    }
-
-    .topbar{
-        padding:12px 15px;
-    }
-
-    .content-area{
-        padding:10px;
-    }
-
-    .quick-stat h4{
-        font-size:16px;
-    }
-
-    .quick-stat h6{
-        font-size:12px;
-    }
-}
     </style>
 
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
+<nav class="navbar navbar-expand-lg navbar-custom">
 
-<div class="sidebar">
+    <div class="container-fluid">
 
-    <div class="logo-box">
-        <h4>
+        <a class="navbar-brand" href="{% url 'dashboard' %}">
             <i class="fas fa-recycle"></i>
-            <span>Waste ERP</span>
-        </h4>
-        <p>County Waste Management</p>
-    </div>
+            County Waste ERP
+        </a>
 
-    <div class="user-box">
+        <button class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
 
-        <div class="user-avatar">
-            <i class="fas fa-user"></i>
-        </div>
+            <span class="navbar-toggler-icon"></span>
 
-        <h6 class="text-white mt-3">
-            Administrator
-        </h6>
+        </button>
 
-    </div>
+        <div class="collapse navbar-collapse" id="navbarMenu">
 
-    <div class="menu-title">
-        Main Navigation
-    </div>
+            <ul class="navbar-nav ms-auto">
 
-    <a href="{% url 'dashboard' %}">
-        <i class="fas fa-chart-line"></i>
-        <span>Executive Dashboard</span>
-    </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'dashboard' %}">
+                        Dashboard
+                    </a>
+                </li>
 
-    <a href="{% url 'customers' %}">
-        <i class="fas fa-money-bill-wave"></i>
-        <span>Billing & Revenue</span>
-    </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'customers' %}">
+                        Billing
+                    </a>
+                </li>
 
-    <a href="{% url 'routes' %}">
-        <i class="fas fa-truck-loading"></i>
-        <span>Collection Management</span>
-    </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'routes' %}">
+                        Collection
+                    </a>
+                </li>
 
-    <a href="{% url 'complaints' %}">
-        <i class="fas fa-exclamation-circle"></i>
-        <span>Citizen Complaints</span>
-    </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'complaints' %}">
+                        Complaints
+                    </a>
+                </li>
 
-    <a href="{% url 'vehicles' %}">
-        <i class="fas fa-truck"></i>
-        <span>Fleet Management</span>
-    </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'vehicles' %}">
+                        Fleet
+                    </a>
+                </li>
 
-    <a href="{% url 'inventory' %}">
-        <i class="fas fa-recycle"></i>
-        <span>Recycling Management</span>
-    </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'inventory' %}">
+                        Recycling
+                    </a>
+                </li>
 
-    <a href="{% url 'truck_entries' %}">
-        <i class="fas fa-dumpster"></i>
-        <span>Landfill Management</span>
-    </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'truck_entries' %}">
+                        Landfill
+                    </a>
+                </li>
 
-    <a href="{% url 'gis_dashboard' %}">
-        <i class="fas fa-map-marked-alt"></i>
-        <span>GIS Mapping</span>
-    </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'gis_dashboard' %}">
+                        GIS
+                    </a>
+                </li>
 
-    <a href="{% url 'reports_dashboard' %}">
-        <i class="fas fa-chart-pie"></i>
-        <span>Reports & Analytics</span>
-    </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'reports_dashboard' %}">
+                        Reports
+                    </a>
+                </li>
 
-    <hr class="text-white">
-
-    <div class="menu-title">
-        Future Modules
-    </div>
-
-    <a href="#">
-        <i class="fas fa-microchip"></i>
-        <span>Smart Bins</span>
-    </a>
-
-    <a href="#">
-        <i class="fas fa-users"></i>
-        <span>Staff & HR</span>
-    </a>
-
-    <a href="#">
-        <i class="fas fa-boxes"></i>
-        <span>Procurement</span>
-    </a>
-
-    <a href="#">
-        <i class="fas fa-leaf"></i>
-        <span>Environmental</span>
-    </a>
-
-    <a href="#">
-        <i class="fas fa-globe"></i>
-        <span>Citizen Portal</span>
-    </a>
-
-    <a href="#">
-        <i class="fas fa-brain"></i>
-        <span>AI Analytics</span>
-    </a>
-
-    <a href="#">
-        <i class="fas fa-cog"></i>
-        <span>Settings</span>
-    </a>
-
-    <br><br><br>
-
-</div>
-
-<!-- MAIN CONTENT -->
-
-<div class="main-content">
-
-    <!-- TOPBAR -->
-
-    <div class="topbar">
-
-        <div class="d-flex justify-content-between align-items-center">
-
-            <div>
-                <h4 class="mb-0">
-                    County Waste Management ERP
-                </h4>
-
-                <small class="text-muted">
-                    Smart Waste Operations Platform
-                </small>
-            </div>
-
-            <div>
-                <span class="county-badge">
-                    County Government Demo
-                </span>
-            </div>
+            </ul>
 
         </div>
 
+        <span class="county-badge">
+            Watch Demo Videos
+        </span>
+
     </div>
 
-    <!-- QUICK STATS -->
+</nav>
 
-    <div class="container-fluid mt-3">
+<div class="container-fluid mt-4">
 
-        <div class="row g-3">
+    <div class="row g-3">
 
-            <div class="col-6 col-lg-3">
-                <div class="quick-stat">
-                    <h6>Total Revenue</h6>
-                    <h4 class="text-success">KES 24.5M</h4>
-                </div>
+        <div class="col-6 col-md-3">
+            <div class="quick-stat">
+                <h6>Total Revenue</h6>
+                <h4 class="text-success">KES 24.5M</h4>
             </div>
-
-            <div class="col-6 col-lg-3">
-                <div class="quick-stat">
-                    <h6>Waste Collected</h6>
-                    <h4 class="text-primary">12,850 T</h4>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3">
-                <div class="quick-stat">
-                    <h6>Fleet Size</h6>
-                    <h4 class="text-warning">24</h4>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3">
-                <div class="quick-stat">
-                    <h6>Complaints</h6>
-                    <h4 class="text-danger">45</h4>
-                </div>
-            </div>
-
         </div>
 
-    </div>
+        <div class="col-6 col-md-3">
+            <div class="quick-stat">
+                <h6>Waste Collected</h6>
+                <h4 class="text-primary">12,850 T</h4>
+            </div>
+        </div>
 
-    <!-- PAGE CONTENT -->
+        <div class="col-6 col-md-3">
+            <div class="quick-stat">
+                <h6>Fleet Size</h6>
+                <h4 class="text-warning">24</h4>
+            </div>
+        </div>
 
-    <div class="content-area">
-
-        {% block content %}
-        {% endblock %}
+        <div class="col-6 col-md-3">
+            <div class="quick-stat">
+                <h6>Open Complaints</h6>
+                <h4 class="text-danger">45</h4>
+            </div>
+        </div>
 
     </div>
 
 </div>
+
+<div class="content-area">
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
